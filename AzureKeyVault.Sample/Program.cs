@@ -1,4 +1,5 @@
 using Azure.Identity;
+using AzureKeyVault.Interact;
 using AzureKeyVault.Sample;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<KeyVaultConfig>(vaultConfig);
+builder.Services.AddSingleton<IVaultManager, VaultManager>();
 
 var app = builder.Build();
 
