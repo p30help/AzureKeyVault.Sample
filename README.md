@@ -14,3 +14,7 @@ For getting ClientId, ClientSecret and TenantId:
 **Ps1**:  If you use `DefaultAzureCredential` instead of `ClientSecretCredential` and also you want to have access to your keyvault on Visual Studio for debuging or etc., you must login to your azure account in **Visual Studio** and also your user must add to **Access Policies** of your KeyVault (like above steps)
 
 **Ps2**:  If you want to publish your application on **AppService** must add your AppService to **Access Policies** of your KeyVault (like above steps)
+
+---
+
+For using **Encrypt** and **Decrypt** ability of KeyVault you must go to your KeyVault portal -> Click on **Keys** (under **Objects** section) -> Click on ***Generate/Import*** button -> Create a Key (for example an Asymetric key like RSA)
