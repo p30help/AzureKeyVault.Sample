@@ -44,6 +44,8 @@ namespace AzureKeyVault.Interact
 
         private ManagedIdentityCredential GetCredential()
         {
+            // more information about type of credential
+            // https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/identity/identity/samples/AzureIdentityExamples.md
             return new ManagedIdentityCredential();
         }
 
