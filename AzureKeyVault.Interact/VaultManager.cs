@@ -42,9 +42,9 @@ namespace AzureKeyVault.Interact
             _keyClient = new KeyClient(new Uri(_endpoint), GetCredential(), keyOptions);
         }
 
-        private DefaultAzureCredential GetCredential()
+        private ManagedIdentityCredential GetCredential()
         {
-            return new DefaultAzureCredential();
+            return new ManagedIdentityCredential();
         }
 
         public async Task<string> CreateSecret(string secretName, string secretValue)
